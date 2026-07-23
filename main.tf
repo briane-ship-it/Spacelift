@@ -29,3 +29,4 @@ resource "aws_s3_bucket" "orbit_storage" {
     project   = "Orbit-labs"
     environment = "demo"
   }
+}
