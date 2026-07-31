@@ -4,13 +4,13 @@ resource "random_pet" "orbit_mascot" {
 
 resource "aws_s3_bucket" "orbit_storage" {
   bucket_prefix = "orbit-storage-"
-}
+
   tags = {
-  name        = "Orbit Labs Storage"
-  managedBy   = "Spacelift"
-  mission     = "First Launch"
-  project     = "Orbit-labs"
-  environment = "demo"
+    name      = "Orbit Labs Storage"
+    managedBy = "Spacelift"
+    mission   = "First Launch"
+    project   = "Orbit-labs"
+  }
 }
 
 terraform {
@@ -31,4 +31,3 @@ data "aws_caller_identity" "current" {}
 output "aws_account_id" {
   value = data.aws_caller_identity.current.account_id
 }
-
