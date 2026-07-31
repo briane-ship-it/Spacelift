@@ -1,5 +1,16 @@
 resource "random_pet" "orbit_mascot" {
   length = 2
+
+resource "aws_s3_bucket" "orbit_storage" {
+  bucket_prefix = "orbit-storage-"
+
+  tags = {
+    name      = "Orbit Labs Storage"
+    managedBy = "Spacelift"
+    mission   = "First Launch"
+    project   = "Orbit-labs"
+  }
+}
 }
 terraform {
   required_providers {
