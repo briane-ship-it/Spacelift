@@ -4,7 +4,7 @@ variable "subnet_id" {
 }
 
 resource "random_pet" "orbit_mascot" {
-  length = 2
+  length = 4
 }
 
 resource "aws_s3_bucket" "orbit_storage" {
